@@ -1,51 +1,62 @@
-# Whatsapp-Bot
- 
-# Python Script Documentation
+# WhatsApp Chatbot with Flask
 
-## Description
-This Python script includes functions for various purposes such as searching Wikipedia, retrieving football match results, performing Google searches, interacting with Wolfram Alpha API, and more.
+## Overview
 
-## Requirements
+This is a simple Flask application that functions as a WhatsApp chatbot. The bot can perform various tasks, including searching Wikipedia, providing football match results, generating Google search results, interacting with Wolfram Alpha API, and more.
+
+## Prerequisites
+
 - Python 3.x
-- Required Python libraries: `requests`, `string`, `BeautifulSoup`, `wolframalpha`, `json`, `googlesearch-python`, `http.client`
+- Flask
+- Twilio
+- Beautiful Soup
+- Wolfram Alpha API Key
+- Football Data API Key
+- Twilio Account SID and Auth Token
 
-## Setup
+## Installation
+
 1. Install the required Python libraries:
+
    ```bash
-   pip install requests
-   pip install beautifulsoup4
-   pip install wolframalpha
-   pip install google
-2. Obtain API keys:
-   Wolfram Alpha API Key: https://products.wolframalpha.com/api/
-   Football Data API Key: https://www.football-data.org/
+   pip install flask twilio beautifulsoup4 requests wolframalpha googlesearch-python
+Obtain API keys:
 
-Functions
-url_maker(input_text)
-Generates a Wikipedia URL based on the input text.
+Wolfram Alpha API Key: https://products.wolframalpha.com/api/
+Football Data API Key: https://www.football-data.org/
+Twilio Account SID and Auth Token: Twilio.com
+Replace the placeholder API keys and Twilio credentials in the app.py file with your actual keys.
 
-wikibot(url)
-Extracts information from a Wikipedia page.
+Usage
+Run the Flask application:
 
-get_latest_match_results()
-Gets the latest football match results using the Football Data API.
+bash
+Copy code
+python app.py
+Expose the application to the internet using tools like Ngrok.
 
-search_google(query)
-Performs a Google search and returns the top 5 results.
+Configure Twilio to send incoming WhatsApp messages to the publicly accessible URL provided by Ngrok.
 
-wolfbot(query)
-Interacts with the Wolfram Alpha API.
+Send WhatsApp messages to interact with the chatbot.
 
-get_upcoming_fixtures(team_name)
-Gets upcoming football fixtures for a given team using the Football Data API.
+Features
+Wikipedia Search: Start a message with a dot (.) followed by the search query to get information from Wikipedia.
 
-liveresults()
-Gets live football match results using the Football Data API.
+Introduction: Send "hello" to receive an introduction message.
 
-get_insult()
-Gets a random insult from evilinsult.com.
+Upcoming Fixtures: Include the word "upcoming" in your message followed by a football team's name to get upcoming fixtures.
 
-Notes
-Ensure that you have the necessary API keys for the Wolfram Alpha API, Football Data API, and RapidAPI.
+Football Results: Send a message starting with "football" to get live football match results.
+
+Google Search: Start a message with "google" followed by the search query to get Google search results.
+
+Wolfram Alpha Interaction: Start a message with a plus sign (+) followed by a query to interact with Wolfram Alpha.
+
+Customization
+Add more friend names and funny comments to the friend_comments dictionary in the bot function.
 Disclaimer
-This script is provided as-is. Use it responsibly and ensure compliance with API usage policies.
+This chatbot script is provided as-is. Use it responsibly and ensure compliance with Twilio's usage policies.
+
+
+Feel free to modify the content based on your specific needs and provide additional information if necessary.
+

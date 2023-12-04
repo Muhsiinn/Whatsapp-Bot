@@ -86,7 +86,38 @@ def wolfbot(query):
 def get_upcoming_fixtures(team_name):
     # Function to get upcoming football fixtures for a given team
     team_name_to_id = {
-        # Add team mappings here
+    "manchester united": 33,
+    "newcastle": 34,
+    "bournemouth": 35,
+    "fulham": 36,
+    "huddersfield": 37,
+    "watford": 38,
+    "wolves": 39,
+    "liverpool": 40,
+    "southampton": 41,
+    "arsenal": 42,
+    "burnley": 44,
+    "everton": 45,
+    "leicester": 46,
+    "tottenham": 47,
+    "west ham": 48,
+    "chelsea": 49,
+    "manchester city": 50,
+    "brighton": 51,
+    "crystal palace": 52,
+    "barcelona": 529,
+    "atletico madrid": 530,
+    "athletic club": 531,
+    "valencia": 532,
+    "villarreal": 533,
+    "las palmas": 534,
+    "malaga": 535,
+    "sevilla": 536,
+    "leganes": 537,
+    "real sociedad": 548,
+    "kerala blasters": 3477,
+    "ajax": 194,
+    #Add more team mappings here 
     }
 
     if team_name.lower() not in team_name_to_id:

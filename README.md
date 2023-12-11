@@ -19,7 +19,7 @@ This is a simple Flask application that functions as a WhatsApp chatbot. The bot
 1. Install the required Python libraries:
 
    ```bash
-   pip install flask twilio beautifulsoup4 requests wolframalpha googlesearch-python
+   pip install -r requirements.txt
 Obtain API keys:
 
 Wolfram Alpha API Key: https://products.wolframalpha.com/api/

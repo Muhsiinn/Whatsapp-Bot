@@ -57,7 +57,7 @@ def bot():
         x = wolfbot(incoming)
         msg.body(x)
     else:
-        msg.body("Ithin answer tharan kayyilla ... adutha chodyam !!")
+        msg.body("Sorry the following command is not configured")
 
     return str(resp)
 

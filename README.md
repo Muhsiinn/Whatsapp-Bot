@@ -50,13 +50,13 @@ Send a message to your Twilio WhatsApp number.
 
 Use the following commands:
 
-wiki <query>: Search Wikipedia for the given query.
-hello: Greet the chatbot.
-upcoming <team>: Get upcoming fixtures for a specific team.
-live football: Get live football results.
-search <query>: Perform a Google search.
-wolfbot <command>: Execute a command using the Wolfbot.
-Feel free to customize the commands and functionalities based on your requirements.
+1. wiki <query>: Search Wikipedia for the given query.
+2. hello: Greet the chatbot.
+3. upcoming <team>: Get upcoming fixtures for a specific team.
+4. live football: Get live football results.
+5. search <query>: Perform a Google search.
+6. wolfbot <command>: Execute a command using the Wolfbot.
+7. Feel free to customize the commands and functionalities based on your requirements.
 
 Feel Free to Modify and Improve!
 This is an old fun project, and we encourage you to feel free to modify, improve, and build upon it. Whether you want to add new features, fix bugs, or simply experiment with the code, your contributions are highly appreciated.

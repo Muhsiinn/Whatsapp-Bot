@@ -58,4 +58,4 @@ Use the following commands:
 6. wolfbot <command>: Execute a command using the Wolfbot.
 ## Feel free to customize the commands and functionalities based on your requirements.
 
-This is an old fun project, and we encourage you to feel free to modify, improve, and build upon it. Whether you want to add new features, fix bugs, or simply experiment with the code, your contributions are highly appreciated.
+This is an old fun project, and I encourage you to feel free to modify, improve, and build upon it. Whether you want to add new features, fix bugs, or simply experiment with the code, your contributions are highly appreciated.

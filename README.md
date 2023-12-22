@@ -9,7 +9,6 @@ This project implements a WhatsApp chatbot using Flask and Twilio, providing var
 Make sure you have the following installed on your machine:
 
 - Python 3.x
-- [Twilio account](https://www.twilio.com/try-twilio)
 - [ngrok](https://ngrok.com/) (for local development and testing)
 
 ### Installation

@@ -1,62 +1,63 @@
-# WhatsApp Chatbot with Flask
+# WhatsApp Bot
 
-## Overview
+This project implements a WhatsApp chatbot using Flask and Twilio, providing various commands and functionalities.
 
-This is a simple Flask application that functions as a WhatsApp chatbot. The bot can perform various tasks, including searching Wikipedia, providing football match results, generating Google search results, interacting with Wolfram Alpha API, and more.
+## Getting Started
 
-## Prerequisites
+### Prerequisites
+
+Make sure you have the following installed on your machine:
 
 - Python 3.x
-- Flask
-- Twilio
-- Beautiful Soup
-- Wolfram Alpha API Key
-- Football Data API Key
-- Twilio Account SID and Auth Token
+- [Twilio account](https://www.twilio.com/try-twilio)
+- [ngrok](https://ngrok.com/) (for local development and testing)
 
-## Installation
+### Installation
 
-1. Install the required Python libraries:
+1. Clone the repository:
 
    ```bash
-   pip install -r requirements.txt
-Obtain API keys:
+   git clone https://github.com/Muhsiinn/whatsapp-bot.git
+   cd whatsapp-bot
 
-Wolfram Alpha API Key: https://products.wolframalpha.com/api/
-Football Data API Key: https://www.football-data.org/
-Twilio Account SID and Auth Token: Twilio.com
-Replace the placeholder API keys and Twilio credentials in the app.py file with your actual keys.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+### Configuration
+Update the configuration in config.py with your Twilio credentials and any other necessary settings.
+
+### Running The Application 
+
+1. Start ngrok to expose your local Flask app to the internet:
+   
+   ```bash 
+   ngrok http 5000
+
+2. Update your Twilio WhatsApp number's messaging webhook URL to the ngrok URL:
+
+   ```bash
+   https://your-ngrok-url.ngrok.io/bot
+
+3. Run The Flask app :
+   
+   ```bash
+   python main.py
+
+Your WhatsApp chatbot is now running and accessible through the configured ngrok URL.
 
 Usage
-Run the Flask application:
+Send a message to your Twilio WhatsApp number.
 
-bash
-Copy code
-python app.py
-Expose the application to the internet using tools like Ngrok.
+Use the following commands:
 
-Configure Twilio to send incoming WhatsApp messages to the publicly accessible URL provided by Ngrok.
+wiki <query>: Search Wikipedia for the given query.
+hello: Greet the chatbot.
+upcoming <team>: Get upcoming fixtures for a specific team.
+live football: Get live football results.
+search <query>: Perform a Google search.
+wolfbot <command>: Execute a command using the Wolfbot.
+Feel free to customize the commands and functionalities based on your requirements.
 
-Send WhatsApp messages to interact with the chatbot.
-
-Features
-Wikipedia Search: Start a message with a dot (.) followed by the search query to get information from Wikipedia.
-
-Introduction: Send "hello" to receive an introduction message.
-
-Upcoming Fixtures: Include the word "upcoming" in your message followed by a football team's name to get upcoming fixtures.
-
-Football Results: Send a message starting with "football" to get live football match results.
-
-Google Search: Start a message with "google" followed by the search query to get Google search results.
-
-Wolfram Alpha Interaction: Start a message with a plus sign (+) followed by a query to interact with Wolfram Alpha.
-
-Customization
-Add more friend names and funny comments to the friend_comments dictionary in the bot function.
-Disclaimer
-This chatbot script is provided as-is. Use it responsibly and ensure compliance with Twilio's usage policies.
-
-
-Feel free to modify the content based on your specific needs and provide additional information if necessary.
-
+Feel Free to Modify and Improve!
+This is an old fun project, and we encourage you to feel free to modify, improve, and build upon it. Whether you want to add new features, fix bugs, or simply experiment with the code, your contributions are highly appreciated.

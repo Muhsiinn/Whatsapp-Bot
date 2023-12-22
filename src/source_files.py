@@ -6,6 +6,7 @@ import json
 from googlesearch import search
 import http.client
 from datetime import datetime
+from config import Config
 
 def url_maker(input_text):
     # Function to generate a Wikipedia URL based on the input text
@@ -39,29 +40,6 @@ def wikibot(url):
     # Join the list elements into a single string using newlines
     return '\n'.join(info_list)
 
-def get_latest_match_results():
-    # Function to get the latest football match results
-    url = 'https://api.football-data.org/v2/matches'
-    headers = {'X-Auth-Token': "Your api key "}
-
-    response = requests.get(url, headers=headers)
-    data = response.json()
-    matches = data.get("matches",[])
-    home = []
-    away  = []
-
-    for match in matches:
-        hometeam = match.get("homeTeam","N/A")
-        hometeam = hometeam.get("name","N/A")
-        awayteam = match.get("awayTeam","N/A")
-        awayteam = awayteam.get("name","N/A")
-        home.append(hometeam)
-        away.append(awayteam)
-    results = []
-    for i, j in zip(home, away):
-        results.append(f"{i} -----VS----- {j}")
-    formatted = "\n".join(results)
-    return formatted
 
 def search_google(query):
     # Function to perform a Google search and return results
@@ -75,7 +53,7 @@ def search_google(query):
 
 def wolfbot(query):
     # Function to interact with Wolfram Alpha API
-    api_key = "Your api key"
+    api_key = Config.WOLFRAM_ALPHA_API_KEY
     url = f"http://api.wolframalpha.com/v1/conversation.jsp?appid={api_key}&i={query}"
     results = requests.get(url)
     data = results.text
@@ -128,7 +106,7 @@ def get_upcoming_fixtures(team_name):
 
     headers = {
         'x-rapidapi-host': "v3.football.api-sports.io",
-        'x-rapidapi-key': "Your api key"
+        'x-rapidapi-key': Config.FOOTBALL_API_KEY
     }
 
     conn.request("GET", f"/fixtures?team={team_id}&status=NS&next=5", headers=headers)
@@ -152,13 +130,13 @@ def get_upcoming_fixtures(team_name):
 
     return formatted_upcoming_fixtures
 
-def liveresults():
+def live_results():
     # Function to get live football match results
     conn = http.client.HTTPSConnection("v3.football.api-sports.io")
 
     headers = {
         'x-rapidapi-host': "v3.football.api-sports.io",
-        'x-rapidapi-key': "Your api key"
+        'x-rapidapi-key': Config.livefootball_API_Key
     }
 
     conn.request("GET", "/fixtures?live=all", headers=headers)
@@ -180,7 +158,7 @@ def liveresults():
         formatted_output += f"Status: {status}\n"
         formatted_output += "--------------------------\n"
     
-    return formatted_output
+    return (formatted_output)
 
 def get_insult():
     # Function to get a random insult
@@ -189,5 +167,4 @@ def get_insult():
     data = response.json()
     insult = data.get("insult")
     return insult
-
 

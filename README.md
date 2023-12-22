@@ -56,7 +56,6 @@ Use the following commands:
 4. live football: Get live football results.
 5. search <query>: Perform a Google search.
 6. wolfbot <command>: Execute a command using the Wolfbot.
-7. Feel free to customize the commands and functionalities based on your requirements.
+## Feel free to customize the commands and functionalities based on your requirements.
 
-Feel Free to Modify and Improve!
 This is an old fun project, and we encourage you to feel free to modify, improve, and build upon it. Whether you want to add new features, fix bugs, or simply experiment with the code, your contributions are highly appreciated.
